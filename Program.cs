@@ -74,19 +74,58 @@ int[] Getarray(int size, int minValue, int maxValue)
 [3 7 22 2 78] -> 76
 */
 
-float[] B = new float[50];
-// double[] array =  Getarray(5, 0, 100);
-Console.WriteLine($"[{string.Join(", ", B)}]");
+
+double[] array = Getarray(5, 0, 100);
+Console.WriteLine($"[{string.Join(", ", array)}]");
+// Console.WriteLine($"Diff = {Max(array) - Min(array)}");
+Console.WriteLine($"Разница между максимальным и минимальным элементом = {MAXX(array) - Min(array)}");
+
+
 
 double[] Getarray(int size, int minValue, int maxValue)
 {
     double[] res = new double[size];
     for (int i = 0; i < size; i++)
     {
-        res[i] = new Random().Next(minValue, maxValue + 1);
+
+        res[i] = new Random().NextDouble() * 100;
+
     }
     return res;
 }
+
+
+
+double Min(double[] array)
+{
+    double min = double.MaxValue;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+    return min;
+}
+
+double MAXX(double[] array)
+{
+    double max = double.MinValue;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+        }
+    }
+    return max;
+}
+
+
+
+
+
 
 /* void FillArrayRandomNumbers(double[] numbers, int minValue, int maxValue)
 {

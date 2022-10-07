@@ -2,7 +2,7 @@
 [345, 897, 568, 234] -> 2
 */
 
-/* int [] array = Getarray(5, 100, 1000);
+int [] array = Getarray(5, 100, 1000);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 Console.WriteLine($"В массиве количество четных чисел = {HowManyEven(array)}");
 
@@ -30,7 +30,7 @@ int[] Getarray(int size, int minValue, int maxValue)
     }
     return res;
 }
- */
+
 
 
 
@@ -38,7 +38,7 @@ int[] Getarray(int size, int minValue, int maxValue)
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0 */
 
-/* 
+
 int[] array = Getarray(5, 1, 5);
 Console.WriteLine($"[{string.Join(", ", array)}]");
 Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {SumOdd(array)} ");
@@ -66,7 +66,7 @@ int[] Getarray(int size, int minValue, int maxValue)
     return res;
 }
 
- */
+
 
 
 /* Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
@@ -127,10 +127,3 @@ double MAXX(double[] array)
 
 
 
-/* void FillArrayRandomNumbers(double[] numbers, int minValue, int maxValue)
-{
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = Convert.ToDouble(new Random().Next(minValue, maxValue + 1));
-        }
-} */
